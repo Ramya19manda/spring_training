@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.mru.entity.Laptops;
+import com.mru.entity.Mobiles;
 import com.mru.service.MRUService;
 
 @RestController
@@ -20,5 +21,10 @@ public class MRUContoller {
 		return service.getAllLaptops();
 		
 	}
+	@GetMapping("/mobiles")
+	public List<Mobiles> getMobiles(){
+		return service.getAllMobiles();
+	}
+
 
 }
