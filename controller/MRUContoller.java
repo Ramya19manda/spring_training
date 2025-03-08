@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.mru.entity.Laptops;
 import com.mru.entity.Mobiles;
+import com.mru.entity.Watches;
 import com.mru.service.MRUService;
 
 @RestController
@@ -19,12 +20,16 @@ public class MRUContoller {
 	@GetMapping("/laptops")
 	public List<Laptops> getLaptops(){
 		return service.getAllLaptops();
-		
 	}
 	@GetMapping("/mobiles")
 	public List<Mobiles> getMobiles(){
 		return service.getAllMobiles();
 	}
-
-
+	
+	@GetMapping("/watches")
+	public List<Watches> getWatches(){
+		return service.getAllWatches();
+	}
+	
+	
 }
